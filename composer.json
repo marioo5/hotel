@@ -1,0 +1,10 @@
+{"require":{
+    "setasign/fpdf": "1.8",
+         "illuminate/database": "^8.70"
+},
+"autoload": {
+    "classmap": [
+        "app/core","app/models","app/controllers"
+    ]
+}
+}
