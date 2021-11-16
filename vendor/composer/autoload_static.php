@@ -149,6 +149,8 @@ class ComposerStaticInit9dcaf3b9e4d6671d68dfee9e4b9ef19e
     public static $classMap = array (
         'App' => __DIR__ . '/../..' . '/app/core/App.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
+        'BlogController' => __DIR__ . '/../..' . '/app/controllers/BlogController.php',
+        'Blogs' => __DIR__ . '/../..' . '/app/models/Blogs.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Controller' => __DIR__ . '/../..' . '/app/core/Controller.php',
         'FPDF' => __DIR__ . '/..' . '/setasign/fpdf/fpdf.php',

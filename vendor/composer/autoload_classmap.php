@@ -8,6 +8,8 @@ $baseDir = dirname($vendorDir);
 return array(
     'App' => $baseDir . '/app/core/App.php',
     'Attribute' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
+    'BlogController' => $baseDir . '/app/controllers/BlogController.php',
+    'Blogs' => $baseDir . '/app/models/Blogs.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'Controller' => $baseDir . '/app/core/Controller.php',
     'FPDF' => $vendorDir . '/setasign/fpdf/fpdf.php',

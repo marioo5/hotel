@@ -42,7 +42,7 @@
 	          <li class="nav-item"><a href="<?= ROOT_URL;?>/pages/rooms" class="nav-link">Habitaciones</a></li>
 	          <li class="nav-item"><a href="<?= ROOT_URL;?>/pages/restaurant" class="nav-link">Gastronomia</a></li>
 	          <li class="nav-item"><a href="<?= ROOT_URL;?>/pages/bodas" class="nav-link">Bodas</a></li>
-	          <li class="nav-item"><a href="<?= ROOT_URL;?>/pages/blog" class="nav-link">Blog</a></li>
+	          <li class="nav-item"><a href="<?= ROOT_URL;?>/blog" class="nav-link">Blog</a></li>
 	          <li class="nav-item"><a href="<?= ROOT_URL;?>/pages/contact" class="nav-link">Contacto</a></li>
 	        </ul>
 	      </div>
