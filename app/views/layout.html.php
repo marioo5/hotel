@@ -44,6 +44,8 @@
 	          <li class="nav-item"><a href="<?= ROOT_URL;?>/pages/bodas" class="nav-link">Bodas</a></li>
 	          <li class="nav-item"><a href="<?= ROOT_URL;?>/blog" class="nav-link">Blog</a></li>
 	          <li class="nav-item"><a href="<?= ROOT_URL;?>/pages/contact" class="nav-link">Contacto</a></li>
+            <li class="nav-item"><a href="<?= ROOT_URL;?>/users/login/" class="nav-link">Login</a></li>
+            <li class="nav-item"><a href="<?= ROOT_URL;?>/users/register/" class="nav-link">Register</a></li>
 	        </ul>
 	      </div>
 	    </div>

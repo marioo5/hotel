@@ -164,6 +164,7 @@ class ComposerStaticInit9dcaf3b9e4d6671d68dfee9e4b9ef19e
         'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
         'UnhandledMatchError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
         'Users' => __DIR__ . '/../..' . '/app/models/Users.php',
+        'UsersController' => __DIR__ . '/../..' . '/app/controllers/UsersController.php',
         'ValueError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
     );
 

@@ -2,7 +2,7 @@
 
 class Users extends Model{
 
-    protected $fillable = ['name', 'email', 'password'];
+    protected $fillable = ['name', 'email', 'password', 'role'];
     protected $guarded = ['id','confirmpassword'];
     protected $appends = ['confirmpassword'];
 
@@ -21,7 +21,7 @@ class Users extends Model{
 
     public function attributes():array{
 
-        return ['name','email','password'];
+        return ['name','email','password', 'role'];
     }
 }
 

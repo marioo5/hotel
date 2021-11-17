@@ -42,6 +42,7 @@ class UsersController extends Controller{
                 "id" => $user->id,
                 "name" => $user->name,
                 "email" => $user->email,
+                "role" => $user->role,
             );
             Messages::setMsg('Correct Login', 'success');
             header("Location: " . ROOT_URL);

@@ -23,5 +23,6 @@ return array(
     'Stringable' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
     'UnhandledMatchError' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
     'Users' => $baseDir . '/app/models/Users.php',
+    'UsersController' => $baseDir . '/app/controllers/UsersController.php',
     'ValueError' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
 );
