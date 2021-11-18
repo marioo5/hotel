@@ -17,7 +17,7 @@ class UsersController extends Controller{
             if($user->validate()){
                 $user->save();
                 Messages::setMsg('Correct Register', 'success');
-                header("Location: " . ROOT_URL . "users/login");
+                header("Location: " . ROOT_URL . "/users/login");
             }else{
                 Messages::setMsg('Incorrect Register', 'error');
             }
@@ -39,7 +39,7 @@ class UsersController extends Controller{
         if(password_verify($post['password'] , $user['password'])){
             $_SESSION['is_logged_in'] = true;
             $_SESSION['user_data'] = array(
-                "id" => $user->id,
+                "id" => $user->id_user,
                 "name" => $user->name,
                 "email" => $user->email,
                 "role" => $user->role,
@@ -48,7 +48,7 @@ class UsersController extends Controller{
             header("Location: " . ROOT_URL);
         }else{
             Messages::setMsg('Incorrect Login', 'error');
-            header("Location: " . ROOT_URL. "users/login");
+            header("Location: " . ROOT_URL. "/users/login");
         }
         
         }

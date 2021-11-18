@@ -7,7 +7,7 @@
       <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
         <div class="text">
           <p class="breadcrumbs mb-2" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="<?= ROOT_URL;?>">Home</a></span> <span class="mr-2"><a href="<?= ROOT_URL;?>/blog">Blog</a></span></p>
-          <h1 class="mb-4 bread">Register</h1>
+          <h1 class="mb-4 bread">Crear Nuevo Posts</h1>
         </div>
       </div>
     </div>
@@ -21,22 +21,35 @@
         <div class="pt-5 mt-5">
           <!-- END comment-list -->
           <div class="comment-form-wrap pt-5">
-            <h3 class="mb-5">Register</h3>
-            <form action="<?= ROOT_URL;?>/users/register" method="post" enctype="multipart/form-data" class="p-5 bg-light">
+            <h3 class="mb-5">Crear un Post</h3>
+            <form action="<?= ROOT_URL;?>/posts/add" method="post" enctype="multipart/form-data" class="p-5 bg-light">
               <div class="form-group">
-                <label for="name">Name</label>
-                <?= $form->input('text', ['name' => 'name', 'class' => 'form-control']) ?>
+                <label for="title">Title</label>
+                <?= $form->input('text', ['name' => 'title', 'class' => 'form-control']) ?>
               </div>
               <div class="form-group">
-                <label for="email">Email</label>
-                <?= $form->input('email', ['name' => 'email', 'class' => 'form-control']) ?>
+                <label for="website">Message</label>
+                <?= $form->textarea(['name' => 'text', 'class' => 'form-control', 'cols' => '30', 'rows' => '10']) ?>
               </div>
+
               <div class="form-group">
-                <label for="passwd">Password</label>
-                <?= $form->input('password', ['name' => 'password', 'class' => 'form-control']) ?>
+                <label for="category">Categories</label>
+                <select name="category" id="category" class="form-control">
+                <?php 
+                foreach($data['categories'] as $key => $item) : ?>
+                  <option value="<?php echo $item['id']; ?>"><?php echo $item['name']; ?></option>
+                  <?php endforeach ; ?>
+                </select>
               </div>
+
               <div class="form-group">
-                <input type="submit" value="Register" class="btn py-3 px-4 btn-primary">
+                <label for="image">Image</label>
+                <br>
+                <?= $form->input('file', ['name' => 'cover']) ?>
+              </div>
+
+              <div class="form-group">
+                <input type="submit" value="Crear" class="btn py-3 px-4 btn-primary">
               </div>
 
             </form>

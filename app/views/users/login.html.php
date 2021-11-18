@@ -22,7 +22,7 @@
           <!-- END comment-list -->
           <div class="comment-form-wrap pt-5">
             <h3 class="mb-5">Login</h3>
-            <form action="#" class="p-5 bg-light">
+            <form action="<?= ROOT_URL;?>/users/login" method="post" enctype="multipart/form-data" class="p-5 bg-light">
               <div class="form-group">
                 <label for="email">Email</label>
                 <?= $form->input('email', ['name' => 'email', 'class' => 'form-control']) ?>
@@ -32,7 +32,7 @@
                 <?= $form->input('password', ['name' => 'password', 'class' => 'form-control']) ?>
               </div>
               <div class="form-group">
-                <input type="submit" value="Logearsey65" class="btn py-3 px-4 btn-primary">
+                <input type="submit" value="Logearse" class="btn py-3 px-4 btn-primary">
               </div>
             </form>
           </div>

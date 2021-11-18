@@ -1,8 +1,6 @@
 <?php
 
-class Blogs extends Model{
-
-    protected $table = 'posts';
+class Posts extends Model{
 
     public function rules():array{
         return $rules = array(
@@ -31,6 +29,11 @@ class Blogs extends Model{
     public function files(){
 
         return $this->hasOne('Files');
+    }
+
+    public function categories(){
+
+        return $this->hasOne('Categories');
     }
 
 

@@ -8,8 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'App' => $baseDir . '/app/core/App.php',
     'Attribute' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
-    'BlogController' => $baseDir . '/app/controllers/BlogController.php',
-    'Blogs' => $baseDir . '/app/models/Blogs.php',
+    'Categories' => $baseDir . '/app/models/Categories.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'Controller' => $baseDir . '/app/core/Controller.php',
     'FPDF' => $vendorDir . '/setasign/fpdf/fpdf.php',
@@ -20,6 +19,8 @@ return array(
     'Model' => $baseDir . '/app/core/Model.php',
     'Normalizer' => $vendorDir . '/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php',
     'PagesController' => $baseDir . '/app/controllers/PagesController.php',
+    'Posts' => $baseDir . '/app/models/Posts.php',
+    'PostsController' => $baseDir . '/app/controllers/PostsController.php',
     'Stringable' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
     'UnhandledMatchError' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
     'Users' => $baseDir . '/app/models/Users.php',

@@ -149,8 +149,7 @@ class ComposerStaticInit9dcaf3b9e4d6671d68dfee9e4b9ef19e
     public static $classMap = array (
         'App' => __DIR__ . '/../..' . '/app/core/App.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
-        'BlogController' => __DIR__ . '/../..' . '/app/controllers/BlogController.php',
-        'Blogs' => __DIR__ . '/../..' . '/app/models/Blogs.php',
+        'Categories' => __DIR__ . '/../..' . '/app/models/Categories.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Controller' => __DIR__ . '/../..' . '/app/core/Controller.php',
         'FPDF' => __DIR__ . '/..' . '/setasign/fpdf/fpdf.php',
@@ -161,6 +160,8 @@ class ComposerStaticInit9dcaf3b9e4d6671d68dfee9e4b9ef19e
         'Model' => __DIR__ . '/../..' . '/app/core/Model.php',
         'Normalizer' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php',
         'PagesController' => __DIR__ . '/../..' . '/app/controllers/PagesController.php',
+        'Posts' => __DIR__ . '/../..' . '/app/models/Posts.php',
+        'PostsController' => __DIR__ . '/../..' . '/app/controllers/PostsController.php',
         'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
         'UnhandledMatchError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
         'Users' => __DIR__ . '/../..' . '/app/models/Users.php',

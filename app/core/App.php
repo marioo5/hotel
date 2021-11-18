@@ -43,11 +43,11 @@ public function __construct()
 
     $this->params = $url ? array_values($url) : [];
 
-    if (isset($_POST) && !empty($_POST)) {
+    // if (isset($_POST) && !empty($_POST)) {
 
-        $this->params = $_POST;
+    //     $this->params = $_POST;
 
-    }
+    // }
   
     call_user_func_array([$this->controller, $this->method], array_values($this->params));
 

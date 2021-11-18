@@ -42,16 +42,21 @@
 	          <li class="nav-item"><a href="<?= ROOT_URL;?>/pages/rooms" class="nav-link">Habitaciones</a></li>
 	          <li class="nav-item"><a href="<?= ROOT_URL;?>/pages/restaurant" class="nav-link">Gastronomia</a></li>
 	          <li class="nav-item"><a href="<?= ROOT_URL;?>/pages/bodas" class="nav-link">Bodas</a></li>
-	          <li class="nav-item"><a href="<?= ROOT_URL;?>/blog" class="nav-link">Blog</a></li>
+	          <li class="nav-item"><a href="<?= ROOT_URL;?>/posts" class="nav-link">Blog</a></li>
 	          <li class="nav-item"><a href="<?= ROOT_URL;?>/pages/contact" class="nav-link">Contacto</a></li>
+            <?php if(!isset($_SESSION['is_logged_in'])) : ?>
             <li class="nav-item"><a href="<?= ROOT_URL;?>/users/login/" class="nav-link">Login</a></li>
             <li class="nav-item"><a href="<?= ROOT_URL;?>/users/register/" class="nav-link">Register</a></li>
+            <?php endif; ?>
+            <?php if(isset($_SESSION['is_logged_in'])) : ?>
+            <li class="nav-item"><a href="<?= ROOT_URL;?>/users/logout" class="nav-link">Logout</a>
+            <?php endif; ?>
 	        </ul>
 	      </div>
 	    </div>
 	  </nav>
 
-        <?php Messages::display();?> 
+        <!-- <?php Messages::display();?>  -->
         <?= $content ?>
 
       <footer class="ftco-footer ftco-bg-dark ftco-section">

@@ -6,7 +6,7 @@ class Files extends Model{
     protected $guarded = ['id'];
 
     public function books(){
-        return $this->belongsTo('Books');
+        return $this->belongsTo('Posts');
     }
 
     public function rules(): array{
