@@ -34,6 +34,23 @@ class PostsController extends Controller
         }
     }
 
+    public function read($id)
+    {
+
+        if (isset($_SESSION['is_logged_in'])) {
+            $blog = new Posts();
+            $blog = $blog->find($id);
+            $user = new Users();
+            $user = $user->where('id', '=' ,$blog->publisher);
+            $users = $user->name;
+            $cat = new Categories();
+            $cat = $cat->where('id', '=' ,$blog->category);
+            $cats = $cat->name;
+            $this->view('blog-single.html', ['posts' => $blog, 'author' => $users, 'categories' => $cats]);
+            
+        }
+    }
+
     public function add()
     {
 
@@ -92,27 +109,29 @@ class PostsController extends Controller
 
                 $post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
                 $blog = new Posts();
-                $blog = $blog->find($id);
-                $blog->title = $post['title'];
-                $blog->text = $post['text'];
-                $blog->category = $post['category'];
-                $blog->publisher = $_SESSION['user_data']['id'];
+                $blogs = $blog->find($id);
+                $blogs->save();
+
+                $blogs->loadData($post);
+                // $blog->title = $post['title'];
+                // $blog->text = $post['text'];
+                // $blog->category = $post['category'];
+                // $blog->publisher = $_SESSION['user_data']['id'];
 
                     if (is_uploaded_file($_FILES['cover']['tmp_name'])) {
                         // $blog = $blog->files->where('posts_id', '=', $id);
                         // $blog = $blog->destroy($id);
                         $uploadfile = $_FILES['cover']['tmp_name'];
                         $uploaddata['filedata'] = file_get_contents($uploadfile);
-                        $uploaddata['filename'] = $_FILES['cover']['name'];
-                        $uploaddata['mimetype'] = $_FILES['cover']['type'];
-                        $file = new Files;
-                        $file->loadData($uploaddata);
-                        $blog->files()->save($file);
-                        
+                        // $uploaddata['filename'] = $_FILES['cover']['name'];
+                        // $uploaddata['mimetype'] = $_FILES['cover']['type'];
+                        // $file = new Files;
+                        // $file->loadData($uploaddata);
+                        // $blog->files()->save($file);
                         
                     }
 
-                    $blog->save();
+                    $blogs->save();
                     header("Location: " . ROOT_URL . "/posts");
                     
             }

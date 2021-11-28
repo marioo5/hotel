@@ -21,7 +21,7 @@
       <?php foreach ($data['posts'] as $item) : ?>
         <div class="col-md-3 d-flex ftco-animate">
           <div class="blog-entry align-self-stretch">
-            <a href="blog-single.html" class="block-20" style='background-image: url("data:img/jpeg;base64,<?php echo base64_encode($item->files->filedata); ?>");'>
+            <a href="<?= ROOT_URL;?>/posts/read/" class="block-20" style='background-image: url("data:img/jpeg;base64,<?php echo base64_encode($item->files->filedata); ?>");'>
             </a>
             <div class="text mt-3 d-block">
               <h3 class="heading mt-3"><a href="#"><?php echo $item['title']; ?></a></h3>
@@ -45,7 +45,7 @@
           <ul>
             <li><a href="#">&lt;</a></li>
             <?php for ($data['page'] = 1; $data['page'] <= $data['numpages']; $data['page']++) {
-              echo '<li><a href ="index.php?page=' . $data['page'] . '">' . $data['page'] . ' </a></li>';
+              echo '<li><a href ="blog.php?page=' . $data['page'] . '">' . $data['page'] . ' </a></li>';
             }
             ?>
             <li><a href="#">&gt;</a></li>
